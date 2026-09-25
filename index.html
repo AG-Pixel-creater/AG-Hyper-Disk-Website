@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ur">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AG HyperDesk | Local Virtual Workspace Manager</title>
+    <meta
+      name="description"
+      content="AG HyperDesk — a Windows-based local workspace manager for isolated envs, process tracking, system monitoring, and snapshots."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark" data-lang="ur">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">AG</div>
+          <div>
+            <p class="brand-name">HyperDesk</p>
+            <small>Windows Sandbox Manager</small>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#features" data-i18n="navFeatures">خصوصیات</a>
+          <a href="#workspaces" data-i18n="navWorkspaces">ورک اسپیسز</a>
+          <a href="#monitoring" data-i18n="navMonitoring">مانیٹرنگ</a>
+          <a href="#technology" data-i18n="navTech">ٹیکنالوجی</a>
+        </nav>
+
+        <div class="controls" aria-label="Theme and language controls">
+          <div class="segmented" data-group="theme">
+            <button class="toggle active" data-theme-toggle="dark" type="button">Dark</button>
+            <button class="toggle" data-theme-toggle="light" type="button">Light</button>
+          </div>
+          <div class="segmented" data-group="lang">
+            <button class="toggle active" data-lang-toggle="ur" type="button">اردو</button>
+            <button class="toggle" data-lang-toggle="en" type="button">English</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow" data-i18n="heroBadge">AG Ecosystem • Local Workspace Platform</span>
+            <h1 data-i18n="heroTitle">AG HyperDesk</h1>
+            <p class="lead" data-i18n="heroText">
+              Windows ke andar multiple isolated workspaces ko manage karne wale local sandbox manager ka smart dashboard.
+            </p>
+            <div class="cta-row">
+              <a href="#workspaces" class="btn primary" data-i18n="heroPrimaryBtn">ورک اسپیسز دیکھیں</a>
+              <a href="#technology" class="btn secondary" data-i18n="heroSecondaryBtn">ٹیکنالوجی</a>
+            </div>
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <strong>04</strong>
+                <span data-i18n="statWorkspaces">Workspaces</span>
+              </div>
+              <div class="mini-stat">
+                <strong>28%</strong>
+                <span data-i18n="statCpu">CPU Load</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Live</strong>
+                <span data-i18n="statSnapshot">Snapshot</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="terminal-window">
+              <div class="window-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="prompt">C:\&gt;</span> ag-hyperdesk --workspace python-dev</div>
+                <div class="terminal-line success">✔ Workspace loaded</div>
+                <div class="terminal-line">ENV: PYTHONUNBUFFERED=1</div>
+                <div class="terminal-line">PROC: python.exe • PID 3812</div>
+                <div class="terminal-line">STATE: snapshot ready</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="feature-section">
+          <div class="section-heading">
+            <span class="section-kicker" data-i18n="featuresTag">AG HyperDesk kya hai?</span>
+            <h2 data-i18n="featuresTitle">ایک local virtual workspace / sandbox manager</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="icon">🧩</div>
+              <h3 data-i18n="featureOneTitle">Multiple Workspaces</h3>
+              <p data-i18n="featureOneText">
+                Har workspace apna environment, processes aur config rakhta hai, ta ke multiple projects asani se isolate rahain.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">⚙️</div>
+              <h3 data-i18n="featureTwoTitle">Environment Variables</h3>
+              <p data-i18n="featureTwoText">
+                Har workspace ke liye alag ENV inject hota hai, jaise PYTHONUNBUFFERED, BROWSER aur CORTEX_MODE, bina system-wide effect ke.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">🚀</div>
+              <h3 data-i18n="featureThreeTitle">Process Launcher</h3>
+              <p data-i18n="featureThreeText">
+                Commands ko PID ke saath track karna, CPU/RAM stats dikhana aur required process ko kill karna asan ho jata hai.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">💾</div>
+              <h3 data-i18n="featureFourTitle">Snapshots</h3>
+              <p data-i18n="featureFourText">
+                Current state save kar lo, phir restore kar ke waisi hi environment ka dobara use lo — jaise save/load game.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="workspaces" class="workspace-section">
+          <div class="section-heading left">
+            <span class="section-kicker" data-i18n="workspacesTag">Built for developers</span>
+            <h2 data-i18n="workspacesTitle">Default workspaces + isolated flow</h2>
+          </div>
+
+          <div class="workspace-list">
+            <div class="workspace-card active">
+              <div class="workspace-head">
+                <span class="workspace-badge">🐍</span>
+                <div>
+                  <h3 data-i18n="workspacePythonTitle">Python Dev</h3>
+                  <small data-i18n="workspacePythonMeta">Python coding sandbox</small>
+                </div>
+              </div>
+              <ul>
+                <li data-i18n="workspacePythonItem1">Local Python env</li>
+                <li data-i18n="workspacePythonItem2">Fast debugging</li>
+                <li data-i18n="workspacePythonItem3">Session isolation</li>
+              </ul>
+            </div>
+
+            <div class="workspace-card">
+              <div class="workspace-head">
+                <span class="workspace-badge">🌐</span>
+                <div>
+                  <h3 data-i18n="workspaceWebTitle">Web Testing</h3>
+                  <small data-i18n="workspaceWebMeta">Browser/web app testing</small>
+                </div>
+              </div>
+              <ul>
+                <li data-i18n="workspaceWebItem1">Browser env control</li>
+                <li data-i18n="workspaceWebItem2">App testing</li>
+                <li data-i18n="workspaceWebItem3">Safe launch mode</li>
+              </ul>
+            </div>
+
+            <div class="workspace-card">
+              <div class="workspace-head">
+                <span class="workspace-badge">🧠</span>
+                <div>
+                  <h3 data-i18n="workspaceCortexTitle">AG Cortex Test</h3>
+                  <small data-i18n="workspaceCortexMeta">AI model testing</small>
+                </div>
+              </div>
+              <ul>
+                <li data-i18n="workspaceCortexItem1">Dedicated AI flow</li>
+                <li data-i18n="workspaceCortexItem2">Model experiments</li>
+                <li data-i18n="workspaceCortexItem3">Test harness</li>
+              </ul>
+            </div>
+
+            <div class="workspace-card">
+              <div class="workspace-head">
+                <span class="workspace-badge">🧪</span>
+                <div>
+                  <h3 data-i18n="workspaceCleanTitle">Clean Sandbox</h3>
+                  <small data-i18n="workspaceCleanMeta">Fresh isolated env</small>
+                </div>
+              </div>
+              <ul>
+                <li data-i18n="workspaceCleanItem1">Zero clutter</li>
+                <li data-i18n="workspaceCleanItem2">Fresh state</li>
+                <li data-i18n="workspaceCleanItem3">Safe experiments</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="monitoring" class="monitoring-section">
+          <div class="section-heading left">
+            <span class="section-kicker" data-i18n="monitoringTag">Live system monitoring</span>
+            <h2 data-i18n="monitoringTitle">System health + process tracking</h2>
+          </div>
+
+          <div class="monitoring-grid">
+            <div class="monitor-card gauges">
+              <div class="gauge-wrap">
+                <div class="gauge" style="--value: 72; --gauge-color: #60a5fa;">
+                  <span>72%</span>
+                </div>
+                <label data-i18n="gaugeCpu">CPU</label>
+              </div>
+              <div class="gauge-wrap">
+                <div class="gauge" style="--value: 58; --gauge-color: #34d399;">
+                  <span>58%</span>
+                </div>
+                <label data-i18n="gaugeRam">RAM</label>
+              </div>
+              <div class="gauge-wrap">
+                <div class="gauge" style="--value: 41; --gauge-color: #fbbf24;">
+                  <span>41%</span>
+                </div>
+                <label data-i18n="gaugeDisk">Disk</label>
+              </div>
+              <div class="gauge-wrap">
+                <div class="gauge" style="--value: 66; --gauge-color: #f472b6;">
+                  <span>66%</span>
+                </div>
+                <label data-i18n="gaugeNetwork">Network</label>
+              </div>
+            </div>
+
+            <div class="monitor-card chart-card">
+              <div class="chart-head">
+                <h3 data-i18n="chartTitle">CPU Sparkline</h3>
+                <span class="pulse-dot"></span>
+              </div>
+              <svg class="sparkline" viewBox="0 0 320 120" preserveAspectRatio="none" aria-label="CPU usage chart">
+                <defs>
+                  <linearGradient id="sparkFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.08" />
+                  </linearGradient>
+                </defs>
+                <path d="M0,95 L30,82 L60,72 L90,86 L120,60 L150,76 L180,58 L210,64 L240,49 L270,55 L300,28 L320,40 L320,120 L0,120 Z" fill="url(#sparkFill)"></path>
+                <path d="M0,95 L30,82 L60,72 L90,86 L120,60 L150,76 L180,58 L210,64 L240,49 L270,55 L300,28 L320,40" fill="none" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round"></path>
+              </svg>
+              <div class="chart-legend">
+                <span data-i18n="chartLive">Live usage</span>
+                <strong>+12.4%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="technology" class="technology-section">
+          <div class="section-heading">
+            <span class="section-kicker" data-i18n="techTag">Technical overview</span>
+            <h2 data-i18n="techTitle">Kya hai isme aur kyun useful hai?</h2>
+          </div>
+
+          <div class="tech-grid">
+            <div class="tech-panel">
+              <ul class="feature-list">
+                <li><strong>UI Framework:</strong> <span>PyQt6</span></li>
+                <li><strong>Theme:</strong> <span>Custom dark theme</span></li>
+                <li><strong>Monitoring:</strong> <span>CPU / RAM / Disk / Network</span></li>
+                <li><strong>Storage:</strong> <span>~/.ag_hyperdesk/workspaces.json</span></li>
+                <li><strong>Process Launch:</strong> <span>subprocess.Popen</span></li>
+              </ul>
+            </div>
+
+            <div class="tech-panel quote-panel">
+              <p data-i18n="techQuote">
+                “Ek PyQt6 app jo Windows ke andar multiple isolated workspaces manage karta hai — env variables, processes, snapshots, aur live system stats ke saath — bina actual VM ke.”
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="usecases-section">
+          <div class="section-heading left">
+            <span class="section-kicker" data-i18n="useCasesTag">Real use cases</span>
+            <h2 data-i18n="useCasesTitle">Ye kyun useful hai?</h2>
+          </div>
+
+          <div class="usecase-grid">
+            <div class="usecase-item">
+              <h3 data-i18n="useCasePythonTitle">Python project testing</h3>
+              <p data-i18n="useCasePythonText">Alag env vars, alag cwd, aur isolated execution.</p>
+            </div>
+            <div class="usecase-item">
+              <h3 data-i18n="useCaseMultiTitle">Multiple projects</h3>
+              <p data-i18n="useCaseMultiText">Har project ka alag isolated config aur process.</p>
+            </div>
+            <div class="usecase-item">
+              <h3 data-i18n="useCaseDebugTitle">Debugging</h3>
+              <p data-i18n="useCaseDebugText">Console se seedha command run, logs check, aur process kill.</p>
+            </div>
+            <div class="usecase-item">
+              <h3 data-i18n="useCaseSandboxTitle">Experimentation</h3>
+              <p data-i18n="useCaseSandboxText">Clean sandbox me kuch bhi try karo, system tootay ga nahi.</p>
+            </div>
+            <div class="usecase-item">
+              <h3 data-i18n="useCaseAITitle">AI model testing</h3>
+              <p data-i18n="useCaseAIText">AG Cortex ke liye dedicated workspace and env control.</p>
+            </div>
+            <div class="usecase-item">
+              <h3 data-i18n="useCaseWebTitle">Web testing</h3>
+              <p data-i18n="useCaseWebText">Chrome/env alag, production se isolated workflow.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="not-vm-section">
+          <div class="not-vm-card">
+            <span class="section-kicker" data-i18n="notVmTag">Ye kya nahi hai?</span>
+            <h2 data-i18n="notVmTitle">Full VM nahi, sirf workspace manager + sandbox wrapper</h2>
+            <div class="not-vm-points">
+              <span data-i18n="notVmItem1">• Full VM nahi hai</span>
+              <span data-i18n="notVmItem2">• Hardware virtualization nahi</span>
+              <span data-i18n="notVmItem3">• Docker jaisa container runtime nahi</span>
+              <span data-i18n="notVmItem4">• Sirf Windows process + env level pe kaam</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p data-i18n="footerText">AG HyperDesk • isolated local environments for modern workflows</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
